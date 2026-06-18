@@ -441,7 +441,7 @@
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 1.5rem;
-      align-items: stretch;
+      align-items: start;
     }
 
     .card {
@@ -948,7 +948,6 @@
       display: none;
     }
     .card[aria-expanded="true"] .card-details { display: block; }
-    .card[aria-expanded="true"] { align-self: start; }
     .card-expand-hint {
       display: flex;
       align-items: center;
@@ -1763,10 +1762,30 @@
   });
 
   // Klikkbare "Hva vi gjør"-kort
+  function equalizeCardHeights() {
+    const cards = document.querySelectorAll('.cards .card');
+    cards.forEach(c => c.style.minHeight = '');
+    let max = 0;
+    cards.forEach(c => {
+      if (c.getAttribute('aria-expanded') !== 'true') {
+        max = Math.max(max, c.offsetHeight);
+      }
+    });
+    cards.forEach(c => {
+      if (c.getAttribute('aria-expanded') !== 'true') {
+        c.style.minHeight = max + 'px';
+      }
+    });
+  }
+
   function toggleCard(card) {
     const isExpanded = card.getAttribute('aria-expanded') === 'true';
     card.setAttribute('aria-expanded', String(!isExpanded));
+    equalizeCardHeights();
   }
+
+  document.addEventListener('DOMContentLoaded', equalizeCardHeights);
+  window.addEventListener('resize', equalizeCardHeights);
 
   // Automatisk årstall i footer
   document.getElementById('footer-year').textContent = new Date().getFullYear();
