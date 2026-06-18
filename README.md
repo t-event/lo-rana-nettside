@@ -24,14 +24,20 @@ Enkeltside-nettside (HTML/CSS/JS) for LO Rana og Omegn, som representerer de lok
 
 ```
 /
-├── index.html        # Hele nettsiden
-├── assets/           # Bilder og logoer
+├── index.html                    # Hele nettsiden
+├── robots.txt                    # Tillater indeksering fra søkemotorer og sosiale medier
+├── assets/                       # Bilder og logoer
 │   ├── logo_kvadrat_1.png
 │   ├── logo_horisontal.png
 │   ├── img_event1.jpg
 │   ├── img_event2.jpg
-│   └── [styrebilder].jpg
-├── CNAME             # Domenekobling til lo-rana.no
+│   ├── Børge Masterdalshei.jpg
+│   ├── Konrad Feyling Gruber.jpg
+│   ├── Mathias Tustervatn.jpg
+│   ├── Morten Lage Jacobsen.jpg
+│   ├── Remi.jpg
+│   └── Roger Ranfjordnes.jpg
+├── CNAME                         # Domenekobling til lo-rana.no
 └── .gitignore
 ```
 
@@ -41,7 +47,15 @@ Enkeltside-nettside (HTML/CSS/JS) for LO Rana og Omegn, som representerer de lok
 Åpne `index.html` i en teksteditor. Seksjoner er merket med kommentarer som `<!-- REDIGER: ... -->`.
 
 ### Legge til styrebilde
-Legg bildefilen i `assets/`-mappen og oppdater den aktuelle `styre-portrait`-blokken i `index.html`:
+
+Styrebilder skal være 600×600 px JPEG. Komprimer bildet med `sips` i Terminal før det legges inn:
+
+```bash
+sips -Z 600 FILNAVN.jpg
+```
+
+Dette endrer størrelsen slik at lengste kant blir 600 px og beholder proporsjonene. Legg deretter bildefilen i `assets/`-mappen og oppdater den aktuelle `styre-portrait`-blokken i `index.html`:
+
 ```html
 <div class="styre-portrait">
   <img src="assets/FILNAVN.jpg" alt="Navn" loading="lazy" />
