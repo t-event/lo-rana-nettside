@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LO Rana og Omegn – Samorganisasjonen for LO-medlemmer i Rana-regionen</title>
+  <meta name="description" content="LO Rana og Omegn er den lokale samorganisasjonen for LO-medlemmer i Rana-regionen. Vi arbeider for gode lønns- og arbeidsvilkår, trygge arbeidsplasser og et rettferdig samfunn." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lo-rana.no" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lo-rana.no" />
+  <meta property="og:site_name" content="LO Rana og Omegn" />
+  <meta property="og:title" content="LO Rana og Omegn – Samorganisasjonen for LO-medlemmer i Rana-regionen" />
+  <meta property="og:description" content="Sammen er vi sterke – for faglige rettigheter og et anstendig arbeidsliv i Rana-regionen." />
+  <meta property="og:image" content="https://lo-rana.no/assets/logo_kvadrat_1.png" />
+  <meta property="og:locale" content="nb_NO" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="LO Rana og Omegn" />
+  <meta name="twitter:description" content="Samen er vi sterke – for faglige rettigheter og et anstendig arbeidsliv i Rana-regionen." />
+  <meta name="twitter:image" content="https://lo-rana.no/assets/logo_kvadrat_1.png" />
+
+  <!-- Strukturdata (JSON-LD) – hjelper Google vise adresse og kontaktinfo i søkeresultater -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "LO Rana og Omegn",
+    "url": "https://lo-rana.no",
+    "logo": "https://lo-rana.no/assets/logo_kvadrat_1.png",
+    "description": "LO Rana og Omegn er den lokale samorganisasjonen for LO-medlemmer i Rana-regionen.",
+    "email": "lo-rana@lo-rana.no",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mo i Rana",
+      "addressCountry": "NO"
+    },
+    "sameAs": [
+      "https://www.facebook.com/LORanaogomegn/",
+      "https://www.youtube.com/@loranaogomegn8543"
+    ]
+  }
+  </script>
+
+  <!-- Favicon og mobiloptimalisering -->
+  <link rel="icon" type="image/png" href="assets/logo_kvadrat_1.png" />
+  <link rel="apple-touch-icon" href="assets/logo_kvadrat_1.png" />
+  <meta name="theme-color" content="#C8102E" />
+  <link rel="preload" as="image" href="assets/img_event2.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Facebook SDK -->
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/nb_NO/sdk.js#xfbml=1&version=v19.0&appId=2132471400869728">
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red:        #C8102E;
+      --red-dark:   #1a0000;
+      --red-mid:    #9b0d23;
+      --red-hover:  #e8112e;
+      --off-white:  #faf9f8;
+      --gray-light: #f2f1ef;
+      --gray-mid:   #e5e4e2;
+      --text:       #1a1a1a;
+      --text-muted: #6b6b6b;
+      --white:      #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 18px;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    .container {
+      width: 100%;
+      max-width: 1160px;
+      margin-inline: auto;
+      padding-inline: 2rem;
+    }
+
+    /* ══════════ NAV ══════════ */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--red);
+      transition: box-shadow 0.3s ease;
+    }
+    header.scrolled {
+      box-shadow: 0 4px 24px rgba(0,0,0,0.28);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .nav-logo img { height: 52px; width: auto; }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 0;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.88);
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.4rem 1.1rem;
+      border-bottom: 3px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .nav-links a:hover {
+      color: var(--white);
+      border-bottom-color: var(--white);
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.4rem;
+      width: 40px;
+      height: 40px;
+    }
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 3px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    @media (max-width: 900px) {
+      .hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px; left: 0; right: 0;
+        flex-direction: column;
+        background: var(--red-mid);
+        padding: 0.5rem 0 1rem;
+        z-index: 999;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a {
+        display: block;
+        padding: 0.85rem 2rem;
+        border-bottom: none;
+        font-size: 1rem;
+      }
+    }
+
+    /* ══════════ HERO ══════════ */
+    #hjem {
+      position: relative;
+      background: var(--red-dark);
+      background-image: url('assets/img_event2.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      overflow: hidden;
+      padding: 7rem 2rem 6rem;
+      text-align: center;
+      color: var(--white);
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #hjem::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, rgba(26,0,0,0.82) 0%, rgba(26,0,0,0.65) 50%, rgba(26,0,0,0.75) 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-geo, .hero-gradient, .hero-content, .scroll-hint { z-index: 2; }
+
+    .hero-geo {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .hero-gradient {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 70% at 50% 60%, rgba(200,16,46,0.55) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .hero-logo {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 2.5rem;
+      filter: drop-shadow(0 8px 32px rgba(0,0,0,0.5));
+    }
+
+    .hero-eyebrow {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 1rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.8rem, 6vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+      text-wrap: balance;
+    }
+
+    .hero-title em {
+      font-style: normal;
+      color: #ff6b6b;
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-weight: 400;
+      max-width: 600px;
+      margin: 0 auto 3rem;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.7;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    /* ══════════ KNAPPER ══════════ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.9rem 2rem;
+      border-radius: 3px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, transform 0.15s, box-shadow 0.2s;
+      border: 2px solid transparent;
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--red-dark);
+      border-color: var(--white);
+    }
+    .btn-white:hover {
+      background: transparent;
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+    .btn-outline-white {
+      background: transparent;
+      color: var(--white);
+      border-color: rgba(255,255,255,0.5);
+    }
+    .btn-outline-white:hover {
+      border-color: var(--white);
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-2px);
+    }
+
+    .btn-red {
+      background: var(--red);
+      color: var(--white);
+      border-color: var(--red);
+    }
+    .btn-red:hover {
+      background: var(--red-hover);
+      border-color: var(--red-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(200,16,46,0.4);
+    }
+
+    /* Scroll indicator */
+    .scroll-hint {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      color: rgba(255,255,255,0.35);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .scroll-hint-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.35));
+    }
+
+    /* ══════════ SEKSJONER – felles ══════════ */
+    section { padding: 6rem 2rem; }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .section-rule {
+      width: 48px;
+      height: 4px;
+      background: var(--red);
+      border-radius: 2px;
+      margin-bottom: 2rem;
+    }
+
+    /* ══════════ OM OSS ══════════ */
+    #om-oss { background: var(--white); }
+
+    .om-oss-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .om-oss-text p {
+      color: #444;
+      margin-bottom: 1.25rem;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+    .om-oss-text p:last-child { margin-bottom: 0; }
+
+    .om-oss-stat-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .stat-card {
+      background: var(--gray-light);
+      border-radius: 4px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .stat-card.accent {
+      background: var(--red);
+      color: var(--white);
+    }
+
+    .stat-number {
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.03em;
+    }
+    .stat-label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      opacity: 0.75;
+    }
+
+    /* ══════════ HVA VI GJØR ══════════ */
+    #hva-vi-gjor { background: var(--gray-light); }
+
+    #hva-vi-gjor .section-title { text-align: center; }
+    #hva-vi-gjor .section-label { text-align: center; }
+    #hva-vi-gjor .section-rule { margin-inline: auto; margin-bottom: 3.5rem; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 4px;
+      padding: 2rem 1.5rem;
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border-bottom: 4px solid transparent;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+      border-bottom-color: var(--red);
+    }
+
+    .card-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--red);
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .card-icon svg { width: 28px; height: 28px; fill: var(--white); }
+
+    .card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    .card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; flex: 1; }
+
+    /* ══════════ FACEBOOK / SISTE NYTT ══════════ */
+    #siste-nytt { background: var(--white); }
+
+    .fb-section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .fb-posts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .fb-post {
+      border: 1px solid var(--gray-mid);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+    .fb-post:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.1); }
+
+    .fb-post-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--gray-mid);
+    }
+
+    .fb-avatar {
+      width: 40px;
+      height: 40px;
+      background: var(--red);
+      border-radius: 50%;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .fb-avatar img { width: 40px; height: 40px; object-fit: cover; }
+
+    .fb-post-meta strong { display: block; font-size: 0.88rem; font-weight: 700; }
+    .fb-post-meta span { font-size: 0.78rem; color: var(--text-muted); }
+
+    .fb-post-body { padding: 1.25rem; }
+    .fb-post-body p {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+
+    .fb-post-image {
+      width: 100%;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+    }
+    .fb-post-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .fb-post-footer {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 0.75rem 1.25rem;
+      border-top: 1px solid var(--gray-mid);
+    }
+
+    .fb-reaction {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .fb-cta {
+      text-align: center;
+      padding: 2.5rem;
+      background: var(--gray-light);
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .fb-cta p { font-size: 0.95rem; color: var(--text-muted); }
+
+    /* ══════════ FØLG OSS ══════════ */
+    #hold-deg-oppdatert {
+      background: var(--red-dark);
+      color: var(--white);
+      padding: 6rem 2rem;
+    }
+
+    .folg-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    #hold-deg-oppdatert .section-label { color: rgba(255,255,255,0.5); }
+    #hold-deg-oppdatert .section-title { color: var(--white); }
+    #hold-deg-oppdatert .section-rule { background: var(--red); }
+
+    .folg-text p {
+      color: rgba(255,255,255,0.72);
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .social-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .btn-social {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.5rem;
+      border-radius: 3px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.25);
+      background: transparent;
+      transition: background 0.2s, border-color 0.2s, transform 0.15s;
+      cursor: pointer;
+    }
+    .btn-social:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.7);
+      transform: translateX(4px);
+    }
+    .btn-social svg { flex-shrink: 0; }
+
+    .folg-visual {
+      position: relative;
+      height: 320px;
+    }
+
+    /* ══════════ STYRE ══════════ */
+    #styre { background: var(--white); }
+
+    .styre-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      max-width: 900px;
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+
+    .styre-section-heading {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin: 2.5rem 0 1.25rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--gray-mid);
+    }
+
+    .styre-card { text-align: center; }
+
+    .styre-portrait {
+      width: 100%;
+      height: 200px;
+      border-radius: 3px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      background: var(--gray-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .styre-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: top; pointer-events: none; -webkit-user-drag: none; user-select: none; }
+    .styre-portrait-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0.4rem;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(-45deg, var(--gray-light) 0px, var(--gray-light) 8px, var(--gray-mid) 8px, var(--gray-mid) 16px);
+    }
+    .styre-portrait-placeholder svg { opacity: 0.3; }
+    .styre-portrait-placeholder span { font-size: 0.65rem; font-family: monospace; color: var(--text-muted); }
+
+    .styre-card-name {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+    }
+    .styre-card-role {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.4rem;
+    }
+    .styre-card-contact {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      align-items: center;
+    }
+    .styre-card-contact a { color: var(--red); font-weight: 600; }
+    .styre-card-contact a:hover { text-decoration: underline; }
+
+    .vara-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--gray-light);
+      color: var(--text-muted);
+      border-radius: 2px;
+      padding: 0.15rem 0.5rem;
+      margin-top: 0.25rem;
+    }
+
+    /* ══════════ KONTAKT ══════════ */
+    #kontakt { background: var(--off-white); }
+
+    .kontakt-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .contact-items { list-style: none; margin-top: 0.5rem; }
+
+    .contact-items li {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--gray-mid);
+      font-size: 0.97rem;
+    }
+    .contact-items li:first-child { border-top: 1px solid var(--gray-mid); }
+
+    .contact-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      fill: var(--red);
+      margin-top: 2px;
+    }
+
+    .contact-items a { color: var(--red); font-weight: 600; transition: opacity 0.2s; }
+    .contact-items a:hover { opacity: 0.75; text-decoration: underline; }
+
+    .map-wrap {
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      line-height: 0;
+    }
+    .map-wrap iframe {
+      width: 100%;
+      height: 380px;
+      border: none;
+    }
+
+    /* ══════════ FOOTER ══════════ */
+    footer {
+      background: var(--red-dark);
+      color: var(--white);
+    }
+
+    .footer-topbar {
+      height: 6px;
+      background: var(--red);
+    }
+
+    .footer-main {
+      padding: 3.5rem 2rem 2.5rem;
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 3rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.55);
+      margin-top: 1.25rem;
+      max-width: 320px;
+      line-height: 1.7;
+    }
+
+    .footer-logo { height: 36px; width: auto; max-width: 220px; opacity: 0.9; display: block; }
+
+    .footer-nav-heading {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-nav-list a {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.72);
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .footer-nav-list a:hover { color: var(--white); }
+
+    .lo-norge-block {
+      background: rgba(255,255,255,0.05);
+      border-radius: 4px;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .lo-norge-badge {
+      width: 48px;
+      height: 48px;
+      background: var(--red);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: white;
+      letter-spacing: -0.03em;
+    }
+
+    .lo-norge-text strong { display: block; font-size: 0.85rem; font-weight: 700; color: var(--white); }
+    .lo-norge-text span { font-size: 0.78rem; color: rgba(255,255,255,0.5); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.35); }
+
+    .footer-socials { display: flex; gap: 1rem; }
+    .footer-socials a {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .footer-socials a:hover { color: var(--white); }
+
+    /* ══════════ RESPONSIV – Stor nettbrett / smal PC ══════════ */
+    @media (max-width: 1100px) {
+      .om-oss-grid { gap: 3rem; }
+      .cards { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ══════════ RESPONSIV – Nettbrett ══════════ */
+    @media (max-width: 900px) {
+      section { padding: 4rem 1.5rem; }
+      #hjem { padding: 5rem 1.5rem 4rem; }
+      #hold-deg-oppdatert { padding: 4rem 1.5rem; }
+      .container { padding-inline: 1.5rem; }
+
+      .hero-title { font-size: clamp(2.2rem, 7vw, 3.2rem); }
+      .hero-logo { width: 90px; height: 90px; }
+
+      .om-oss-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+
+      .cards { grid-template-columns: repeat(2, 1fr); }
+
+      .folg-visual { display: none; }
+      .folg-grid { grid-template-columns: 1fr; gap: 2rem; }
+
+      .kontakt-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+
+      .footer-main { padding: 3rem 1.5rem 2rem; gap: 2rem; }
+    }
+
+    /* ══════════ RESPONSIV – Mobil ══════════ */
+    @media (max-width: 600px) {
+      section { padding: 3rem 1rem; }
+      #hjem { padding: 4rem 1rem 3.5rem; min-height: 520px; }
+      #hold-deg-oppdatert { padding: 3rem 1rem; }
+      .container { padding-inline: 1rem; }
+
+      .hero-logo { width: 72px; height: 72px; margin-bottom: 1.5rem; }
+      .hero-eyebrow { font-size: 0.7rem; }
+      .hero-title { font-size: clamp(2rem, 10vw, 2.6rem); }
+      .hero-sub { font-size: 0.95rem; margin-bottom: 2rem; }
+      .hero-buttons { flex-direction: column; align-items: center; }
+      .hero-buttons .btn { width: 100%; max-width: 300px; justify-content: center; }
+      .scroll-hint { display: none; }
+
+      .section-title { font-size: clamp(1.5rem, 6vw, 2rem); }
+
+      .om-oss-stat-block { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+      .stat-card { padding: 1.25rem 1rem; }
+      .stat-number { font-size: 1.8rem; }
+
+      .cards { grid-template-columns: 1fr; }
+
+      .social-buttons { gap: 0.6rem; }
+      .btn-social { padding: 0.85rem 1rem; font-size: 0.82rem; }
+
+      .styre-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+      .styre-portrait { height: 160px; }
+
+      .footer-main { padding: 2.5rem 1rem 1.5rem; grid-template-columns: 1fr; gap: 1.75rem; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; padding: 1.25rem 1rem; gap: 0.5rem; }
+      .lo-norge-block { padding: 1rem; }
+
+      .fb-cta { padding: 1.5rem 1rem; }
+
+      .map-wrap iframe { height: 280px; }
+    }
+
+    @media (min-width: 1400px) {
+      .container { max-width: 1280px; }
+      .hero-title { font-size: 4.5rem; }
+    }
+
+    /* ══════════ EXPANDABLE CARDS ══════════ */
+    .card { cursor: pointer; }
+    .card-details {
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--gray-mid);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      display: none;
+    }
+    .card[aria-expanded="true"] .card-details { display: block; }
+    .card-expand-hint {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: auto;
+      padding-top: 1rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--red);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      pointer-events: none;
+    }
+    .card-expand-hint svg {
+      width: 16px; height: 16px;
+      fill: var(--red);
+      transition: transform 0.25s;
+    }
+    .card[aria-expanded="true"] .card-expand-hint svg { transform: rotate(180deg); }
+    .card[aria-expanded="true"] .card-expand-hint .hint-open { display: none; }
+    .card[aria-expanded="true"] .card-expand-hint .hint-close { display: inline; }
+    .card-expand-hint .hint-close { display: none; }
+
+    /* ══════════ FESTEDE INNLEGG ══════════ */
+    .pinned-section { margin-bottom: 3rem; }
+    .pinned-heading {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--gray-mid);
+    }
+    .pinned-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    .pinned-card {
+      background: var(--off-white);
+      border: 1px solid var(--gray-mid);
+      border-top: 4px solid var(--red);
+      border-radius: 4px;
+      padding: 1.5rem;
+    }
+    .pinned-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--red);
+      background: rgba(200,16,46,0.1);
+      padding: 0.2rem 0.6rem;
+      border-radius: 2px;
+      margin-bottom: 0.75rem;
+    }
+    .pinned-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 0.6rem; color: var(--text); }
+    .pinned-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem; }
+    .pinned-card a.pinned-link {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--red);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .pinned-card a.pinned-link:hover { text-decoration: underline; }
+
+    /* ══════════ NYTTIGE LENKER ══════════ */
+    #nyttige-lenker { background: var(--gray-light); }
+    #nyttige-lenker .section-label { text-align: center; }
+    #nyttige-lenker .section-title { text-align: center; }
+    #nyttige-lenker .section-rule { margin-inline: auto; margin-bottom: 3.5rem; }
+
+    .ressurs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    a.ressurs-card {
+      background: var(--white);
+      border-radius: 4px;
+      padding: 1.5rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      border-left: 4px solid var(--red);
+      transition: box-shadow 0.2s, transform 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+    a.ressurs-card:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+    }
+    .ressurs-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .ressurs-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--red);
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .ressurs-icon svg { width: 18px; height: 18px; fill: var(--white); }
+    a.ressurs-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--text); }
+    a.ressurs-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+
+    @media (max-width: 900px) {
+      .ressurs-grid { grid-template-columns: repeat(2, 1fr); }
+      .pinned-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .ressurs-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="fb-root"></div>
+
+<!-- ══════════ NAVIGASJON ══════════ -->
+<header id="site-header">
+  <nav class="container">
+    <a class="nav-logo" href="#hjem" aria-label="Til toppen">
+      <img src="assets/logo_kvadrat_1.png" alt="LO Rana og Omegn logo" />
+    </a>
+
+    <button class="hamburger" aria-label="Åpne meny" aria-expanded="false" aria-controls="nav-menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- REDIGER: Legg til/fjern menypunkter her -->
+    <ul class="nav-links" id="nav-menu" role="list">
+      <li><a href="#om-oss">Om oss</a></li>
+      <li><a href="#hva-vi-gjor">Hva vi gjør</a></li>
+      <li><a href="#siste-nytt">Siste nytt</a></li>
+      <li><a href="#nyttige-lenker">Ressurser</a></li>
+      <li><a href="#styre">Styre</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<!-- ══════════ HERO (FORSIDE) ══════════ -->
+<!--
+  REDIGER HERO:
+  - Bakgrunnsbilde: bytt ut "assets/img_event2.jpg" i CSS (#hjem bakgrunn)
+  - Undertittel (liten tekst øverst): endre "hero-eyebrow" nedenfor
+  - Tittel: endre teksten i <h1>
+  - Ingress: endre teksten i hero-sub
+  - Knapper: endre tekst og lenker på .btn-knappene
+-->
+<section id="hjem" aria-label="Forside">
+
+  <!-- Geometrisk bakgrunnsmønster -->
+  <div class="hero-geo" aria-hidden="true">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <pattern id="geo-grid" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+          <path d="M 80 0 L 0 0 0 80" fill="none" stroke="rgba(200,16,46,0.18)" stroke-width="1"/>
+        </pattern>
+        <radialGradient id="vignette" cx="50%" cy="50%" r="65%">
+          <stop offset="0%" stop-color="transparent"/>
+          <stop offset="100%" stop-color="rgba(26,0,0,0.7)"/>
+        </radialGradient>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#geo-grid)"/>
+      <circle cx="15%" cy="20%" r="220" fill="none" stroke="rgba(200,16,46,0.12)" stroke-width="1.5"/>
+      <circle cx="15%" cy="20%" r="140" fill="none" stroke="rgba(200,16,46,0.10)" stroke-width="1"/>
+      <circle cx="85%" cy="75%" r="260" fill="none" stroke="rgba(200,16,46,0.10)" stroke-width="1.5"/>
+      <circle cx="85%" cy="75%" r="170" fill="none" stroke="rgba(200,16,46,0.08)" stroke-width="1"/>
+      <line x1="60%" y1="0" x2="100%" y2="60%" stroke="rgba(200,16,46,0.08)" stroke-width="1"/>
+      <rect width="100%" height="100%" fill="url(#vignette)"/>
+    </svg>
+  </div>
+
+  <div class="hero-gradient" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <img class="hero-logo" src="assets/logo_kvadrat_1.png" alt="LO Rana og Omegn logo" />
+    <p class="hero-eyebrow">De lokale fagforeningene i Rana, Hemnes, Nesna og Lurøy</p>
+    <h1 class="hero-title">Sammen er vi<br><em>sterke</em></h1>
+    <p class="hero-sub">For faglige rettigheter og et anstendig arbeidsliv i Rana-regionen</p>
+    <div class="hero-buttons">
+      <a class="btn btn-white" href="https://minside.lofavor.no/?page=shell&shell=main&main=main-temporary-membership-landing" target="_blank" rel="noopener noreferrer">Bli medlem i LO</a>
+      <a class="btn btn-outline-white" href="https://www.facebook.com/LORanaogomegn/" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+        Følg oss på Facebook
+      </a>
+    </div>
+  </div>
+
+  <div class="scroll-hint" aria-hidden="true">
+    <div class="scroll-hint-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ══════════ OM OSS ══════════ -->
+<!--
+  REDIGER OM OSS:
+  - Endre brødteksten i de to <p>-avsnittene
+  - Endre tallene og etikettene i stat-kortene (f.eks. antall kommuner, år osv.)
+-->
+<section id="om-oss" aria-labelledby="om-oss-heading">
+  <div class="container">
+    <div class="om-oss-grid">
+      <div class="om-oss-text">
+        <p class="section-label">Om oss</p>
+        <h2 class="section-title" id="om-oss-heading">LO Rana og Omegn</h2>
+        <div class="section-rule"></div>
+        <p>
+          LO Rana og Omegn er den lokale samorganisasjonen for LO-medlemmer i Rana-regionen. Vi samler fagforeninger på tvers av bransjer og arbeider for gode lønns- og arbeidsvilkår, trygge arbeidsplasser og et rettferdig samfunn for alle arbeidstakere.
+        </p>
+        <p>
+          Vi er en del av Landsorganisasjonen i Norge (LO) – Norges største arbeidstakerorganisasjon med over 1 million medlemmer.
+        </p>
+        <a class="btn btn-red" href="#kontakt" style="margin-top:1.5rem; display:inline-flex;">Ta kontakt med oss</a>
+      </div>
+
+      <!-- Statistikk-kort -->
+      <div class="om-oss-stat-block">
+        <div class="stat-card accent">
+          <div class="stat-number">1M+</div>
+          <div class="stat-label">LO-medlemmer i Norge</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">4</div>
+          <div class="stat-label">Kommuner vi representerer</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">125+</div>
+          <div class="stat-label">År med fagbevegelse</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">LO</div>
+          <div class="stat-label">Del av landets største org.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ HVA VI GJØR ══════════ -->
+<!--
+  REDIGER KJERNESAKER:
+  - Endre tittel, ikon, og tekst på hvert kort
+  - Legg til eller fjern <article class="card">-blokker etter behov
+-->
+<section id="hva-vi-gjor" aria-labelledby="hva-vi-gjor-heading">
+  <div class="container">
+    <p class="section-label">Hva vi jobber for</p>
+    <h2 class="section-title" id="hva-vi-gjor-heading">Våre kjernesaker</h2>
+    <div class="section-rule"></div>
+
+    <div class="cards">
+
+      <!-- REDIGER: Klikk på kortene åpner mer info. Endre tekst i <p> og i <div class="card-details"> -->
+      <article class="card" aria-expanded="false" onclick="toggleCard(this)">
+        <div class="card-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 10H8.5A1.5 1.5 0 0 0 7 11.5v1A1.5 1.5 0 0 0 8.5 14H10v1H7v2h3v1h2v-1h1.5A1.5 1.5 0 0 0 15 15.5v-1A1.5 1.5 0 0 0 13.5 13H12v-1h3v-2h-3V9h-2v1z"/><path d="M2 8V6a1 1 0 0 1 1-1h4v2H4v1l3 3-3 3v2h3v2H3a1 1 0 0 1-1-1v-2.586L4.586 12 2 9.414V8zm13 11v-2h3v-2l-3-3 3-3V7h-3V5h4a1 1 0 0 1 1 1v2.414L17.414 12l2.586 2.586V17a1 1 0 0 1-1 1h-4z"/></svg>
+        </div>
+        <h3>Faglige rettigheter</h3>
+        <p>Vi forhandler og forsvarer tariffavtaler som sikrer deg lønn, arbeidstid og rettigheter på arbeidsplassen.</p>
+        <div class="card-details">
+          <p>Har du spørsmål om rettigheter på arbeidsplassen? Vi hjelper deg med å forstå tariffavtalen og dine rettigheter som arbeidstaker. Ta kontakt med oss for veiledning – vi bistår alle LO-medlemmer i Rana-regionen.</p>
+        </div>
+        <span class="card-expand-hint">
+          <span class="hint-open">Les mer</span><span class="hint-close">Lukk</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+        </span>
+      </article>
+
+      <article class="card" aria-expanded="false" onclick="toggleCard(this)">
+        <div class="card-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+        </div>
+        <h3>Solidaritet og fellesskap</h3>
+        <p>Gjennom samhold skaper vi et sterkere arbeidsliv. Sammen står vi sterkere enn hver for oss.</p>
+        <div class="card-details">
+          <p>Vi arrangerer 1. mai-markeringen i Mo i Rana og samler LO-medlemmer til felles møter og arrangementer gjennom hele året. Fellesskapet er vår viktigste styrke.</p>
+        </div>
+        <span class="card-expand-hint">
+          <span class="hint-open">Les mer</span><span class="hint-close">Lukk</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+        </span>
+      </article>
+
+      <article class="card" aria-expanded="false" onclick="toggleCard(this)">
+        <div class="card-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 14H8v-2h8v2zm0-4H8v-2h8v2zm0-4H8V6h8v2z"/></svg>
+        </div>
+        <h3>Opplæring og kunnskap</h3>
+        <p>Vi tilbyr kurs og kompetanseheving slik at tillitsvalgte og medlemmer kan ivareta sine rettigheter.</p>
+        <div class="card-details">
+          <p>Vi tilbyr kurs for tillitsvalgte og arrangerer seminarer om faglige spørsmål. Kontakt oss for informasjon om aktuelle kurs og opplæringstilbud for deg som LO-representant.</p>
+        </div>
+        <span class="card-expand-hint">
+          <span class="hint-open">Les mer</span><span class="hint-close">Lukk</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+        </span>
+      </article>
+
+      <article class="card" aria-expanded="false" onclick="toggleCard(this)">
+        <div class="card-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        </div>
+        <h3>Lokalt engasjement</h3>
+        <p>Vi er til stede i lokalsamfunnet – på 1. mai-tog, stands og arrangementer gjennom hele året i Rana-regionen.</p>
+        <div class="card-details">
+          <p>Vi besøker videregående skoler og ungdomsorganisasjoner for å informere om fagbevegelsen og arbeidstakernes rettigheter. Vi stiller opp på stands, 1. mai-tog og lokale arrangementer i Rana, Hemnes, Nesna og Lurøy gjennom hele året.</p>
+        </div>
+        <span class="card-expand-hint">
+          <span class="hint-open">Les mer</span><span class="hint-close">Lukk</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+        </span>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SISTE NYTT (Facebook Page Plugin) ══════════ -->
+<section id="siste-nytt" aria-labelledby="siste-nytt-heading">
+  <div class="container">
+    <div class="fb-section-header">
+      <p class="section-label">Siste nytt</p>
+      <h2 class="section-title" id="siste-nytt-heading">Fra vår Facebook-side</h2>
+      <div class="section-rule" style="margin-inline:auto;"></div>
+      <p style="color:var(--text-muted); font-size:0.95rem; max-width:580px; margin:0 auto;">Følg med på hva som skjer – innleggene hentes direkte fra vår Facebook-side og oppdateres automatisk.</p>
+    </div>
+
+    <!--
+      VIKTIGE KUNNGJØRINGER:
+      Legg til/endre/fjern "pinned-card"-blokker nedenfor etter behov.
+      For å fjerne hele seksjonen: slett alt mellom START og SLUTT-kommentarene.
+    -->
+    <!--
+      START: Viktige kunngjøringer
+      For å aktivere seksjonen: flytt denne kommentaren ned til etter </div> (SLUTT-merket).
+      For å legge til en kunngjøring: kopier en "pinned-card"-blokk og fyll inn tittel og tekst.
+    --><!--
+    <div class="pinned-section">
+      <p class="pinned-heading">Viktige kunngjøringer</p>
+      <div class="pinned-grid">
+
+        <div class="pinned-card">
+          <span class="pinned-tag">Viktig</span>
+          <h4>Tittel på viktig innlegg</h4>
+          <p>Skriv inn teksten her. Dette er et sted for kunngjøringer, viktige beskjeder eller arrangementer du vil fremheve særskilt.</p>
+          <a class="pinned-link" href="https://www.facebook.com/LORanaogomegn/" target="_blank" rel="noopener noreferrer">
+            Les mer på Facebook ›
+          </a>
+        </div>
+
+        <div class="pinned-card">
+          <span class="pinned-tag">Viktig</span>
+          <h4>Tittel på viktig innlegg</h4>
+          <p>Skriv inn teksten her. Du kan ha så mange eller få kort her som du ønsker.</p>
+          <a class="pinned-link" href="https://www.facebook.com/LORanaogomegn/" target="_blank" rel="noopener noreferrer">
+            Les mer på Facebook ›
+          </a>
+        </div>
+
+      </div>
+    </div>
+    SLUTT: Viktige kunngjøringer -->
+
+    <!-- Facebook Page Plugin – oppdateres automatisk -->
+    <div style="width:100%; max-width:500px; margin:0 auto 3rem;">
+      <div
+        class="fb-page"
+        data-href="https://www.facebook.com/LORanaogomegn"
+        data-tabs="timeline"
+        data-width="500"
+        data-height="700"
+        data-small-header="false"
+        data-adapt-container-width="true"
+        data-hide-cover="false"
+        data-show-facepile="false"
+      ></div>
+    </div>
+
+    <!-- Lenke til Facebook -->
+    <div class="fb-cta">
+      <p>Se alle innlegg og følg oss for daglige oppdateringer fra regionen</p>
+      <a class="btn btn-red" href="https://www.facebook.com/LORanaogomegn/" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+        Åpne Facebook-siden
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ NYTTIGE LENKER ══════════ -->
+<!--
+  REDIGER RESSURSER:
+  - Oppdater href-lenker om adresser endres
+  - Legg til/fjern <a class="ressurs-card">-blokker etter behov
+  - Lenker merket TODO bør oppdateres med korrekt nettadresse
+-->
+<section id="nyttige-lenker" aria-labelledby="lenker-heading">
+  <div class="container">
+    <p class="section-label">Ressurser</p>
+    <h2 class="section-title" id="lenker-heading">Nyttige lenker</h2>
+    <div class="section-rule"></div>
+
+    <div class="ressurs-grid">
+
+      <a class="ressurs-card" href="https://minside.lofavor.no/?page=shell&shell=main&main=main-temporary-membership-landing" target="_blank" rel="noopener noreferrer">
+        <div class="ressurs-card-header">
+          <div class="ressurs-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-9-2V7H4v3H1v2h3v3h2v-3h3v-2H6zm9 4c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </div>
+          <h3>Bli medlem i LO</h3>
+        </div>
+        <p>Meld deg inn i LO og få tilgang til trygghet, rettigheter og fordeler som fagorganisert.</p>
+      </a>
+
+      <a class="ressurs-card" href="https://www.lofavor.no/" target="_blank" rel="noopener noreferrer">
+        <div class="ressurs-card-header">
+          <div class="ressurs-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.176 5.214L18.577 23 12 18.786 5.423 23l2.753-8.314L1 9.472h8.247z"/></svg>
+          </div>
+          <h3>LO Favør</h3>
+        </div>
+        <p>Fordeler og rabatter for LO-medlemmer – på forsikring, bil, reiseliv og mye mer.</p>
+      </a>
+
+      <a class="ressurs-card" href="https://www.lo.no/hva-vi-mener/lo-advokatene/" target="_blank" rel="noopener noreferrer">
+        <div class="ressurs-card-header">
+          <div class="ressurs-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          </div>
+          <h3>LO-advokaten</h3>
+        </div>
+        <p>Som LO-medlem har du rett til gratis juridisk bistand i arbeidsrettssaker.</p>
+      </a>
+
+      <a class="ressurs-card" href="https://www.tariffbedrifter.no" target="_blank" rel="noopener noreferrer">
+        <div class="ressurs-card-header">
+          <div class="ressurs-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8V9h8v10zm-2-8h-4v2h4v-2zm0 4h-4v2h4v-2z"/></svg>
+          </div>
+          <h3>Tariffbedrifter (Fellesforbundet)</h3>
+        </div>
+        <p>Fellesforbundets oversikt over bedrifter med tariffavtale. Søk opp arbeidsgivere med avtalefestede rettigheter.</p>
+      </a>
+
+      <a class="ressurs-card" href="https://www.hk.no/ordnaforhold" target="_blank" rel="noopener noreferrer">
+        <div class="ressurs-card-header">
+          <div class="ressurs-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
+          </div>
+          <h3>Ordna forhold (Handel og Kontor)</h3>
+        </div>
+        <p>Handel og Kontors oversikt over bedrifter med ordna lønns- og arbeidsvilkår.</p>
+      </a>
+
+      <a class="ressurs-card" href="https://www.lo.no/hvem-vi-er/forbundene/" target="_blank" rel="noopener noreferrer">
+        <div class="ressurs-card-header">
+          <div class="ressurs-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          </div>
+          <h3>LO sine forbund</h3>
+        </div>
+        <p>LO organiserer arbeidstakere gjennom 25 ulike forbund. Finn ditt forbund på lo.no.</p>
+      </a>
+
+      <a class="ressurs-card" href="https://www.lo.no/hovedavtalen/" target="_blank" rel="noopener noreferrer">
+        <div class="ressurs-card-header">
+          <div class="ressurs-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+          </div>
+          <h3>Hovedavtalen</h3>
+        </div>
+        <p>Les Hovedavtalen mellom LO og NHO – grunnlaget for det norske arbeidslivet.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FØLG OSS I SOSIALE MEDIER ══════════ -->
+<section id="hold-deg-oppdatert" aria-labelledby="sosiale-heading">
+  <div class="container">
+    <div class="folg-grid">
+      <div class="folg-text">
+        <p class="section-label">Sosiale medier</p>
+        <h2 class="section-title" id="sosiale-heading">Følg oss i sosiale medier</h2>
+        <div class="section-rule"></div>
+        <p>Vi er mest aktive på Facebook. Der deler vi nyheter, arrangementer og viktig informasjon for LO-medlemmer i Rana-regionen.</p>
+        <div class="social-buttons">
+          <!-- REDIGER: Bytt ut lenker om nødvendig -->
+          <a class="btn-social" href="https://www.facebook.com/LORanaogomegn/" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+            LO Rana og Omegn på Facebook
+          </a>
+          <a class="btn-social" href="https://www.youtube.com/@loranaogomegn8543" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.543 6.498C22 8.28 22 12 22 12s0 3.72-.457 5.502a2.75 2.75 0 0 1-1.938 1.938C17.72 20 12 20 12 20s-5.72 0-7.605-.56a2.75 2.75 0 0 1-1.938-1.938C2 15.72 2 12 2 12s0-3.72.457-5.502a2.75 2.75 0 0 1 1.938-1.938C6.28 4 12 4 12 4s5.72 0 7.605.56a2.75 2.75 0 0 1 1.938 1.938zM10 15.5l5.196-3L10 9.5v6z"/></svg>
+            LO Rana og Omegn på YouTube
+          </a>
+        </div>
+      </div>
+
+      <!-- Dekorativt LO-motiv (skjult på mobil) -->
+      <div class="folg-visual" aria-hidden="true">
+        <svg width="100%" height="100%" viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="1.5" fill="rgba(200,16,46,0.35)"/>
+            </pattern>
+          </defs>
+          <rect width="400" height="320" fill="url(#dots)"/>
+          <circle cx="200" cy="160" r="110" fill="none" stroke="rgba(200,16,46,0.25)" stroke-width="2"/>
+          <circle cx="200" cy="160" r="70" fill="none" stroke="rgba(200,16,46,0.20)" stroke-width="2"/>
+          <circle cx="200" cy="160" r="35" fill="rgba(200,16,46,0.18)"/>
+          <text x="200" y="175" text-anchor="middle" font-family="Open Sans, sans-serif" font-weight="800" font-size="40" fill="rgba(200,16,46,0.6)" letter-spacing="-2">LO</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ STYRET ══════════ -->
+<!--
+  REDIGER STYRET:
+  - Bytt ut e-poster og telefonnumre om de endres
+  - For å legge til portrettbilde: erstatt <div class="styre-portrait-placeholder">...</div>
+    med <img src="assets/BILDEFIL.jpg" alt="Navn"> inne i <div class="styre-portrait">
+  - Legg til/fjern styrekort etter behov
+-->
+<section id="styre" aria-labelledby="styre-heading">
+  <div class="container">
+    <p class="section-label">Om oss</p>
+    <h2 class="section-title" id="styre-heading">Styret i LO Rana og Omegn</h2>
+    <div class="section-rule"></div>
+    <p style="color:var(--text-muted); font-size:0.97rem; max-width:640px;">Styret består av valgte medlemmer fra LO-foreningene i Rana-regionen. Leder, nestleder, sekretær og kasserer kan kontaktes direkte.</p>
+
+    <!-- Arbeidsutvalg -->
+    <p class="styre-section-heading">Arbeidsutvalg</p>
+    <div class="styre-grid">
+
+      <div class="styre-card">
+        <div class="styre-portrait">
+          <img src="assets/Remi.jpg" alt="Remi André Knapstad" loading="lazy" />
+        </div>
+        <div class="styre-card-name">Remi André Knapstad</div>
+        <div class="styre-card-role">Leder</div>
+        <div class="styre-card-contact">
+          <a href="mailto:remiandre.knapstad@7-steel.com">remiandre.knapstad@7-steel.com</a>
+          <span>906 87 786</span>
+        </div>
+      </div>
+
+      <div class="styre-card">
+        <div class="styre-portrait">
+          <img src="assets/Mathias%20Tustervatn.jpg" alt="Mathias Tustervatn" loading="lazy" />
+        </div>
+        <div class="styre-card-name">Mathias Tustervatn</div>
+        <div class="styre-card-role">Nestleder</div>
+        <div class="styre-card-contact">
+          <a href="mailto:mathias.tustervatn@7-steel.com">mathias.tustervatn@7-steel.com</a>
+          <span>929 63 907</span>
+        </div>
+      </div>
+
+      <div class="styre-card">
+        <div class="styre-portrait">
+          <img src="assets/Roger%20Ranfjordnes.jpg" alt="Roger Ranfjordnes" loading="lazy" />
+        </div>
+        <div class="styre-card-name">Roger Ranfjordnes</div>
+        <div class="styre-card-role">Sekretær</div>
+        <div class="styre-card-contact">
+          <a href="mailto:roger-ed@hotmail.com">roger-ed@hotmail.com</a>
+          <span>416 39 982</span>
+        </div>
+      </div>
+
+      <div class="styre-card">
+        <div class="styre-portrait"><div class="styre-portrait-placeholder"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="#aaa" aria-hidden="true"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg><span>Bilde kommer</span></div></div>
+        <div class="styre-card-name">Ginni Asphaug Alte</div>
+        <div class="styre-card-role">Kasserer</div>
+        <div class="styre-card-contact">
+          <a href="mailto:ginnilisa.gjertsen@yahoo.com">ginnilisa.gjertsen@yahoo.com</a>
+          <span>472 47 778</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Øvrige styremedlemmer -->
+    <p class="styre-section-heading">Styremedlemmer</p>
+    <div class="styre-grid">
+
+      <div class="styre-card">
+        <div class="styre-portrait"><div class="styre-portrait-placeholder"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="#aaa" aria-hidden="true"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg><span>Bilde kommer</span></div></div>
+        <div class="styre-card-name">Anette Angelsen Seljeli</div>
+        <div class="styre-card-role">Styremedlem</div>
+      </div>
+
+      <div class="styre-card">
+        <div class="styre-portrait">
+          <img src="assets/B%C3%B8rge%20Masterdalshei.jpg" alt="Børge Masterdalshei" loading="lazy" />
+        </div>
+        <div class="styre-card-name">Børge Masterdalshei</div>
+        <div class="styre-card-role">Styremedlem</div>
+      </div>
+
+      <div class="styre-card">
+        <div class="styre-portrait"><div class="styre-portrait-placeholder"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="#aaa" aria-hidden="true"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg><span>Bilde kommer</span></div></div>
+        <div class="styre-card-name">Jann Magne Thommasen</div>
+        <div class="styre-card-role">Styremedlem</div>
+      </div>
+
+      <div class="styre-card">
+        <div class="styre-portrait">
+          <img src="assets/Morten%20Lage%20Jacobsen.jpg" alt="Morten Lage Jacobsen" loading="lazy" />
+        </div>
+        <div class="styre-card-name">Morten Lage Jacobsen</div>
+        <div class="styre-card-role">Styremedlem</div>
+      </div>
+
+      <div class="styre-card">
+        <div class="styre-portrait"><div class="styre-portrait-placeholder"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="#aaa" aria-hidden="true"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg><span>Bilde kommer</span></div></div>
+        <div class="styre-card-name">Øyvind Johnsen</div>
+        <div class="styre-card-role">Styremedlem</div>
+      </div>
+
+    </div>
+
+    <!-- Ungdomskontakt -->
+    <p class="styre-section-heading">Ungdomskontakt</p>
+    <div class="styre-grid">
+      <div class="styre-card">
+        <div class="styre-portrait">
+          <img src="assets/Konrad%20Feyling%20Gruber.jpg" alt="Konrad Feyling Gruber" loading="lazy" />
+        </div>
+        <div class="styre-card-name">Konrad Feyling Gruber</div>
+        <div class="styre-card-role">Ungdomskontakt</div>
+      </div>
+    </div>
+
+    <!-- Vara -->
+    <p class="styre-section-heading">Vara</p>
+    <div class="styre-grid">
+      <div class="styre-card">
+        <div class="styre-portrait"><div class="styre-portrait-placeholder"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="#aaa" aria-hidden="true"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg><span>Bilde kommer</span></div></div>
+        <div class="styre-card-name">Børge Torgeirsen</div>
+        <div class="styre-card-role">Varamedlem</div>
+        <span class="vara-tag">Vara</span>
+      </div>
+      <div class="styre-card">
+        <div class="styre-portrait"><div class="styre-portrait-placeholder"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="#aaa" aria-hidden="true"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg><span>Bilde kommer</span></div></div>
+        <div class="styre-card-name">Marita Solfjeld</div>
+        <div class="styre-card-role">Varamedlem</div>
+        <span class="vara-tag">Vara</span>
+      </div>
+      <div class="styre-card">
+        <div class="styre-portrait"><div class="styre-portrait-placeholder"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="#aaa" aria-hidden="true"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg><span>Bilde kommer</span></div></div>
+        <div class="styre-card-name">Mona Karin Sæterstad</div>
+        <div class="styre-card-role">Varamedlem</div>
+        <span class="vara-tag">Vara</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ KONTAKT ══════════ -->
+<!--
+  REDIGER KONTAKT:
+  - Endre adresse, org.nr. og andre kontaktdetaljer i listen
+  - Kartet er innbygd Google Maps – fungerer automatisk
+-->
+<section id="kontakt" aria-labelledby="kontakt-heading">
+  <div class="container">
+    <p class="section-label">Kontakt</p>
+    <h2 class="section-title" id="kontakt-heading">Kontakt oss</h2>
+    <div class="section-rule"></div>
+
+    <div class="kontakt-grid">
+      <div>
+        <ul class="contact-items">
+          <li>
+            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>Søndre gate 13, 8624 Mo i Rana</span>
+          </li>
+          <li>
+            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+            <span>Ingen faste åpningstider – <a href="mailto:lo-rana@lo-rana.no">ta kontakt for å avtale møte</a></span>
+          </li>
+          <li>
+            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8V9h8v10zm-2-8h-4v2h4v-2zm0 4h-4v2h4v-2z"/></svg>
+            <span>Org.nr.: <a href="https://virksomhet.brreg.no/nb/oppslag/enheter/893366792" target="_blank" rel="noopener noreferrer">893 366 792</a></span>
+          </li>
+          <li>
+            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span><a href="mailto:lo-rana@lo-rana.no">lo-rana@lo-rana.no</a></span>
+          </li>
+          <li>
+            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            <span>Del av <a href="https://www.lo.no" target="_blank" rel="noopener noreferrer">Landsorganisasjonen i Norge</a></span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Google Maps kart -->
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1716.5143038266282!2d14.142073316158703!3d66.31476477913348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x467f4e51f3d34f05%3A0x3e30c8a19b47b57c!2sS%C3%B8ndre%20gate%2013%2C%208624%20Mo%20i%20Rana!5e0!3m2!1sno!2sno!4v1700000000000!5m2!1sno!2sno"
+          title="Kart over Søndre gate 13, Mo i Rana"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="footer-topbar" aria-hidden="true"></div>
+
+  <div class="footer-main container">
+
+    <!-- Merkevarekolonne -->
+    <div class="footer-brand">
+      <a href="#hjem" aria-label="Til toppen">
+        <img src="assets/logo_horisontal.png" alt="LO Rana og Omegn" class="footer-logo" loading="lazy" />
+      </a>
+      <p>De lokale fagforeningene i Rana, Hemnes, Nesna og Lurøy. Vi arbeider for gode lønns- og arbeidsvilkår, trygge arbeidsplasser og et rettferdig samfunn.</p>
+
+      <div class="lo-norge-block">
+        <img src="assets/logo_kvadrat_1.png" alt="LO" style="width:48px; height:48px; border-radius:6px; flex-shrink:0;" />
+        <div class="lo-norge-text">
+          <strong>Del av LO Norge</strong>
+          <span>Landsorganisasjonen i Norge · <a href="https://www.lo.no" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.5); text-decoration:underline;">lo.no</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigasjonskolonne -->
+    <div>
+      <p class="footer-nav-heading">Navigasjon</p>
+      <ul class="footer-nav-list">
+        <li><a href="#om-oss">Om oss</a></li>
+        <li><a href="#hva-vi-gjor">Hva vi gjør</a></li>
+        <li><a href="#siste-nytt">Siste nytt</a></li>
+        <li><a href="#nyttige-lenker">Ressurser</a></li>
+        <li><a href="#styre">Styre</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+
+
+  </div>
+
+  <div class="footer-bottom container">
+    <p class="footer-copy">© <span id="footer-year"></span> LO Rana og Omegn · Org.nr. <a href="https://virksomhet.brreg.no/nb/oppslag/enheter/893366792" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.35);">893 366 792</a></p>
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/LORanaogomegn/" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="https://www.youtube.com/@loranaogomegn8543" target="_blank" rel="noopener noreferrer">YouTube</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════ JAVASCRIPT ══════════ -->
+<script>
+  // Skygge på navigasjonsbar ved scroll
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 8);
+  }, { passive: true });
+
+  // Hamburgermeny
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', String(!expanded));
+    navLinks.classList.toggle('open');
+  });
+
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.setAttribute('aria-expanded', 'false');
+      navLinks.classList.remove('open');
+    });
+  });
+
+  document.addEventListener('click', e => {
+    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+      hamburger.setAttribute('aria-expanded', 'false');
+      navLinks.classList.remove('open');
+    }
+  });
+
+  // Klikkbare "Hva vi gjør"-kort
+  function toggleCard(card) {
+    const isExpanded = card.getAttribute('aria-expanded') === 'true';
+    card.setAttribute('aria-expanded', String(!isExpanded));
+  }
+
+  // Automatisk årstall i footer
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
