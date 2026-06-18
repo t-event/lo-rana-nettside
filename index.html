@@ -441,7 +441,7 @@
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 1.5rem;
-      align-items: start;
+      align-items: stretch;
     }
 
     .card {
@@ -921,7 +921,6 @@
       .btn-social { padding: 0.85rem 1rem; font-size: 0.82rem; }
 
       .styre-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-      .styre-portrait { height: 160px; }
 
       .footer-main { padding: 2.5rem 1rem 1.5rem; grid-template-columns: 1fr; gap: 1.75rem; }
       .footer-bottom { flex-direction: column; align-items: flex-start; padding: 1.25rem 1rem; gap: 0.5rem; }
@@ -949,6 +948,7 @@
       display: none;
     }
     .card[aria-expanded="true"] .card-details { display: block; }
+    .card[aria-expanded="true"] { align-self: start; }
     .card-expand-hint {
       display: flex;
       align-items: center;
