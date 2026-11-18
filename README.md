@@ -16,7 +16,8 @@ Enkeltside-nettside (HTML/CSS/JS) for LO Rana og Omegn, som representerer de lok
 - Våre kjernesaker (ekspanderbare kort)
 - Siste nytt fra Facebook (Facebook Page Plugin)
 - Nyttige lenker for LO-medlemmer
-- Styret med kontaktinformasjon
+- «Trenger du hjelp på jobben?» – veiviser som sender medlemmer til tillitsvalgt/forbund (LO Rana og Omegn behandler ikke enkeltsaker)
+- Styret (uten personlige telefonnumre/e-poster – henvendelser går til lo-rana@lo-rana.no)
 - Kontaktside med Google Maps
 - Footer med navigasjon
 
