@@ -33,6 +33,7 @@ Enkeltside-nettside (HTML/CSS/JS) for LO Rana og Omegn, som representerer de lok
 │   ├── img_event1.jpg
 │   ├── img_event2.jpg
 │   ├── Børge Masterdalshei.jpg
+│   ├── Ginni Asphaug Alte.jpg
 │   ├── Konrad Feyling Gruber.jpg
 │   ├── Mathias Tustervatn.jpg
 │   ├── Morten Lage Jacobsen.jpg
