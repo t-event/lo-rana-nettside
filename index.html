@@ -356,6 +356,8 @@
 
     /* ══════════ SEKSJONER – felles ══════════ */
     section { padding: 6rem 2rem; }
+    /* Hindrer at seksjonstoppen havner under den faste menylinjen ved menyklikk */
+    section[id] { scroll-margin-top: 72px; }
 
     .section-label {
       font-size: 0.75rem;
@@ -1021,6 +1023,97 @@
     }
     .pinned-card a.pinned-link:hover { text-decoration: underline; }
 
+    /* ══════════ TRENGER DU HJELP? ══════════ */
+    #hjelp { background: var(--off-white); }
+    .hjelp-intro {
+      color: #444;
+      font-size: 1rem;
+      line-height: 1.8;
+      max-width: 720px;
+      margin-bottom: 2.5rem;
+    }
+    .hjelp-notice {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      background: var(--white);
+      border: 1px solid var(--gray-mid);
+      border-left: 5px solid var(--red);
+      border-radius: 4px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2.5rem;
+      max-width: 900px;
+    }
+    .hjelp-notice svg { flex-shrink: 0; width: 26px; height: 26px; fill: var(--red); margin-top: 2px; }
+    .hjelp-notice strong { display: block; font-size: 1.02rem; margin-bottom: 0.25rem; }
+    .hjelp-notice p { font-size: 0.95rem; color: #444; line-height: 1.6; }
+
+    .hjelp-steps {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      counter-reset: steg;
+    }
+    .hjelp-step {
+      background: var(--white);
+      border-radius: 4px;
+      padding: 1.75rem 1.5rem;
+      border-top: 4px solid var(--red);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      counter-increment: steg;
+    }
+    .hjelp-step::before {
+      content: counter(steg);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--red);
+      color: var(--white);
+      font-weight: 800;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    .hjelp-step h3 { font-size: 1.08rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .hjelp-step p { font-size: 0.93rem; color: var(--text-muted); line-height: 1.65; }
+    .hjelp-step p + p { margin-top: 0.6rem; }
+    .hjelp-step a:not(.forbund-link) { color: var(--red); font-weight: 600; text-decoration: underline; }
+
+    .forbund-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    a.forbund-link {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.4rem 0.75rem;
+      border: 2px solid var(--red);
+      border-radius: 3px;
+      color: var(--red);
+      transition: background 0.2s, color 0.2s;
+    }
+    a.forbund-link:hover { background: var(--red); color: var(--white); }
+    a.forbund-link.alle { background: var(--red); color: var(--white); }
+    a.forbund-link.alle:hover { background: var(--red-hover); border-color: var(--red-hover); }
+
+    .hjelp-extra {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      max-width: 900px;
+    }
+    .hjelp-extra a { color: var(--red); font-weight: 600; text-decoration: underline; }
+
+    @media (max-width: 900px) {
+      .hjelp-steps { grid-template-columns: 1fr; gap: 1rem; }
+    }
+
     /* ══════════ NYTTIGE LENKER ══════════ */
     #nyttige-lenker { background: var(--gray-light); }
     #nyttige-lenker .section-label { text-align: center; }
@@ -1097,6 +1190,7 @@
       <li><a href="#hva-vi-gjor">Hva vi gjør</a></li>
       <li><a href="#siste-nytt">Siste nytt</a></li>
       <li><a href="#nyttige-lenker">Ressurser</a></li>
+      <li><a href="#hjelp">Få hjelp</a></li>
       <li><a href="#styre">Styret</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
     </ul>
@@ -1225,9 +1319,9 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 10H8.5A1.5 1.5 0 0 0 7 11.5v1A1.5 1.5 0 0 0 8.5 14H10v1H7v2h3v1h2v-1h1.5A1.5 1.5 0 0 0 15 15.5v-1A1.5 1.5 0 0 0 13.5 13H12v-1h3v-2h-3V9h-2v1z"/><path d="M2 8V6a1 1 0 0 1 1-1h4v2H4v1l3 3-3 3v2h3v2H3a1 1 0 0 1-1-1v-2.586L4.586 12 2 9.414V8zm13 11v-2h3v-2l-3-3 3-3V7h-3V5h4a1 1 0 0 1 1 1v2.414L17.414 12l2.586 2.586V17a1 1 0 0 1-1 1h-4z"/></svg>
         </div>
         <h3>Faglige rettigheter</h3>
-        <p>Vi forhandler og forsvarer tariffavtaler som sikrer deg lønn, arbeidstid og rettigheter på arbeidsplassen.</p>
+        <p>Vi samler fagforeningene i regionen og står sammen for tariffavtaler, trygge arbeidsplasser og rettigheter i arbeidslivet.</p>
         <div class="card-details">
-          <p>Har du spørsmål om rettigheter på arbeidsplassen? Vi hjelper deg med å forstå tariffavtalen og dine rettigheter som arbeidstaker. Ta kontakt med oss for veiledning – vi bistår alle LO-medlemmer i Rana-regionen.</p>
+          <p>Tariffavtalene forhandles av LO-forbundene. Har du spørsmål om lønn, arbeidstid eller rettigheter på din arbeidsplass, er det tillitsvalgt, fagforeningen eller forbundet ditt som hjelper deg. <a href="#hjelp" onclick="event.stopPropagation()" style="color:var(--red); font-weight:700; text-decoration:underline;">Se hvem du skal kontakte</a>.</p>
         </div>
         <span class="card-expand-hint">
           <span class="hint-open">Les mer</span><span class="hint-close">Lukk</span>
@@ -1486,10 +1580,61 @@
   </div>
 </section>
 
+<!-- ══════════ TRENGER DU HJELP PÅ JOBBEN? ══════════ -->
+<!--
+  REDIGER HJELP-VEIVISER:
+  - Denne seksjonen henviser medlemmer til riktig sted, slik at styret ikke får enkeltsaker.
+  - Legg til/fjern forbund ved å kopiere en <a class="forbund-link">-lenke.
+-->
+<section id="hjelp" aria-labelledby="hjelp-heading">
+  <div class="container">
+    <p class="section-label">Medlemshjelp</p>
+    <h2 class="section-title" id="hjelp-heading">Trenger du hjelp på jobben?</h2>
+    <div class="section-rule"></div>
+
+    <div class="hjelp-notice" role="note">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+      <div>
+        <strong>LO Rana og Omegn behandler ikke enkeltsaker</strong>
+        <p>Vi kan dessverre ikke hjelpe med spørsmål om lønn, arbeidstid, oppsigelse eller andre forhold på din arbeidsplass. Det er fagforeningen og forbundet ditt som har avtalene, kompetansen og advokatene – og som hjelper deg som medlem.</p>
+      </div>
+    </div>
+
+    <p class="hjelp-intro">Følg disse stegene for å få raskest mulig hjelp:</p>
+
+    <ol class="hjelp-steps">
+      <li class="hjelp-step">
+        <h3>Snakk med tillitsvalgt</h3>
+        <p>Tillitsvalgt eller klubben på arbeidsplassen din er alltid første stopp. De kjenner arbeidsplassen og avtalene dere har.</p>
+      </li>
+      <li class="hjelp-step">
+        <h3>Kontakt fagforeningen eller forbundet ditt</h3>
+        <p>Har du ikke tillitsvalgt, eller trenger du mer hjelp? Ta kontakt med din lokale fagforening eller forbundet direkte.</p>
+        <div class="forbund-links">
+          <a class="forbund-link" href="https://www.fellesforbundet.no/" target="_blank" rel="noopener noreferrer">Fellesforbundet</a>
+          <a class="forbund-link" href="https://www.fagforbundet.no/" target="_blank" rel="noopener noreferrer">Fagforbundet</a>
+          <a class="forbund-link" href="https://styrke.no/" target="_blank" rel="noopener noreferrer">Forbundet Styrke</a>
+          <a class="forbund-link" href="https://elogit.no/" target="_blank" rel="noopener noreferrer">EL og IT</a>
+          <a class="forbund-link" href="https://hk.no/" target="_blank" rel="noopener noreferrer">Handel og Kontor</a>
+          <a class="forbund-link alle" href="https://www.lo.no/hvem-vi-er/forbundene/" target="_blank" rel="noopener noreferrer">Alle LO-forbund ›</a>
+        </div>
+      </li>
+      <li class="hjelp-step">
+        <h3>Usikker på hvilket forbund du er i?</h3>
+        <p>Logg inn på <a href="https://minside.lofavor.no/" target="_blank" rel="noopener noreferrer">Min side hos LO Favør</a>, eller se på medlemskortet ditt. Der står forbundet ditt.</p>
+        <p>Ikke medlem ennå? <a href="https://minside.lofavor.no/?page=shell&shell=main&main=main-temporary-membership-landing" target="_blank" rel="noopener noreferrer">Meld deg inn her</a>.</p>
+      </li>
+    </ol>
+
+    <p class="hjelp-extra">Spørsmål om forsikring og medlemsfordeler: ring LO Favørs medlemstelefon på <a href="tel:+4741606600">416 06 600</a> eller besøk <a href="https://www.lofavor.no/" target="_blank" rel="noopener noreferrer">lofavor.no</a>.</p>
+  </div>
+</section>
+
 <!-- ══════════ STYRET ══════════ -->
 <!--
   REDIGER STYRET:
-  - Bytt ut e-poster og telefonnumre om de endres
+  - Personlige e-poster og telefonnumre vises bevisst IKKE her, for å unngå at styret
+    blir kontaktet om enkeltsaker. Henvendelser går til lo-rana@lo-rana.no.
   - For å legge til portrettbilde: erstatt <div class="styre-portrait-placeholder">...</div>
     med <img src="assets/BILDEFIL.jpg" alt="Navn"> inne i <div class="styre-portrait">
   - Legg til/fjern styrekort etter behov
@@ -1499,7 +1644,7 @@
     <p class="section-label">Om oss</p>
     <h2 class="section-title" id="styre-heading">Styret i LO Rana og Omegn</h2>
     <div class="section-rule"></div>
-    <p style="color:var(--text-muted); font-size:0.97rem; max-width:640px;">Styret består av valgte medlemmer fra LO-foreningene i Rana-regionen. Leder, nestleder, sekretær og kasserer kan kontaktes direkte.</p>
+    <p style="color:var(--text-muted); font-size:0.97rem; max-width:640px;">Styret består av valgte medlemmer fra LO-foreningene i Rana-regionen. Henvendelser til styret sendes til <a href="mailto:lo-rana@lo-rana.no" style="color:var(--red); font-weight:600;">lo-rana@lo-rana.no</a>. Gjelder det din egen arbeidsplass? <a href="#hjelp" style="color:var(--red); font-weight:600; text-decoration:underline;">Se hvem som kan hjelpe deg</a>.</p>
 
     <!-- Arbeidsutvalg -->
     <p class="styre-section-heading">Arbeidsutvalg</p>
@@ -1511,10 +1656,6 @@
         </div>
         <div class="styre-card-name">Remi André Knapstad</div>
         <div class="styre-card-role">Leder</div>
-        <div class="styre-card-contact">
-          <a href="mailto:remiandre.knapstad@7-steel.com">remiandre.knapstad@7-steel.com</a>
-          <span>906 87 786</span>
-        </div>
       </div>
 
       <div class="styre-card">
@@ -1523,10 +1664,6 @@
         </div>
         <div class="styre-card-name">Mathias Tustervatn</div>
         <div class="styre-card-role">Nestleder</div>
-        <div class="styre-card-contact">
-          <a href="mailto:mathias.tustervatn@7-steel.com">mathias.tustervatn@7-steel.com</a>
-          <span>929 63 907</span>
-        </div>
       </div>
 
       <div class="styre-card">
@@ -1535,20 +1672,12 @@
         </div>
         <div class="styre-card-name">Roger Ranfjordnes</div>
         <div class="styre-card-role">Sekretær</div>
-        <div class="styre-card-contact">
-          <a href="mailto:roger-ed@hotmail.com">roger-ed@hotmail.com</a>
-          <span>416 39 982</span>
-        </div>
       </div>
 
       <div class="styre-card">
         <div class="styre-portrait"><div class="styre-portrait-placeholder"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="#aaa" aria-hidden="true"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg><span>Bilde kommer</span></div></div>
         <div class="styre-card-name">Ginni Asphaug Alte</div>
         <div class="styre-card-role">Kasserer</div>
-        <div class="styre-card-contact">
-          <a href="mailto:ginnilisa.gjertsen@yahoo.com">ginnilisa.gjertsen@yahoo.com</a>
-          <span>472 47 778</span>
-        </div>
       </div>
 
     </div>
@@ -1714,6 +1843,7 @@
         <li><a href="#hva-vi-gjor">Hva vi gjør</a></li>
         <li><a href="#siste-nytt">Siste nytt</a></li>
         <li><a href="#nyttige-lenker">Ressurser</a></li>
+        <li><a href="#hjelp">Få hjelp</a></li>
         <li><a href="#styre">Styret</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
