@@ -356,6 +356,8 @@
 
     /* ══════════ SEKSJONER – felles ══════════ */
     section { padding: 6rem 2rem; }
+    /* Hindrer at seksjonstoppen havner under den faste menylinjen ved menyklikk */
+    section[id] { scroll-margin-top: 72px; }
 
     .section-label {
       font-size: 0.75rem;
