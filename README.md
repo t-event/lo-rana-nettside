@@ -32,6 +32,7 @@ Enkeltside-nettside (HTML/CSS/JS) for LO Rana og Omegn, som representerer de lok
 │   ├── logo_horisontal.png
 │   ├── img_event1.jpg
 │   ├── img_event2.jpg
+│   ├── Anette Seljeli.jpg
 │   ├── Børge Masterdalshei.jpg
 │   ├── Ginni Asphaug Alte.jpg
 │   ├── Konrad Feyling Gruber.jpg
